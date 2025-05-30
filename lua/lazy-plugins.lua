@@ -23,25 +23,32 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
-  require 'kickstart/plugins/gitsigns',
-
-  require 'kickstart/plugins/which-key',
-
-  require 'kickstart/plugins/telescope',
-
-  require 'kickstart/plugins/lspconfig',
-
-  require 'kickstart/plugins/conform',
-
+  require 'kickstart/plugins/anyjump',
   require 'kickstart/plugins/blink-cmp',
-
-  require 'kickstart/plugins/tokyonight',
-
-  require 'kickstart/plugins/todo-comments',
-
+  require 'kickstart/plugins/browser-search',
+  require 'kickstart/plugins/conform',
+  require 'kickstart/plugins/copilot',
+  require 'kickstart/plugins/copilot',
+  require 'kickstart/plugins/git',
+  require 'kickstart/plugins/gitsigns',
+  require 'kickstart/plugins/lspconfig',
   require 'kickstart/plugins/mini',
-
+  require 'kickstart/plugins/nvim-ufo',
+  require 'kickstart/plugins/pantran',
+  require 'kickstart/plugins/platformio',
+  -- require 'kickstart/plugins/refactoring',
+  require 'kickstart/plugins/telescope',
+  require 'kickstart/plugins/tmux-navigator',
+  require 'kickstart/plugins/todo-comments',
+  require 'kickstart/plugins/tokyonight',
   require 'kickstart/plugins/treesitter',
+  require 'kickstart/plugins/treesj',
+  require 'kickstart/plugins/treewalker',
+  require 'kickstart/plugins/undo',
+  require 'kickstart/plugins/url-open',
+  require 'kickstart/plugins/vim-easy-align',
+  require 'kickstart/plugins/vim-visual-multi',
+  require 'kickstart/plugins/which-key',
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -56,7 +63,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart/plugins/neo-tree',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

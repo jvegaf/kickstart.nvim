@@ -1,12 +1,23 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-
+local NS = { noremap = true, silent = true }
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('n', '<leader>q', ':q!<CR>', NS) -- quit without saving
+-- keymap.set("n", "<localleader>w", ":w<CR>", NS)           -- save
+-- keymap.set("n", "<localleader>q", ":Bdelete<CR>", NS)     -- close buffer
+vim.keymap.set('n', 'W', ':w<CR>', NS) -- save
+vim.keymap.set('n', 'Q', ':bdelete<CR>', NS) -- close buffer
+vim.keymap.set('n', 'vv', 'V', NS) -- close buffer
+
+-- Buffers
+vim.keymap.set('n', '<leader>e', ':Neotree<CR>', NS) -- close buffer
+vim.keymap.set('n', 'H', ':BufferLineCyclePrev<cr>', NS)
+vim.keymap.set('n', 'L', ':BufferLineCycleNext<cr>', NS)
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>cq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
