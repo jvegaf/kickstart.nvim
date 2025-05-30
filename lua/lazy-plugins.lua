@@ -36,6 +36,7 @@ require('lazy').setup({
   require 'kickstart/plugins/nvim-ufo',
   require 'kickstart/plugins/pantran',
   require 'kickstart/plugins/platformio',
+  require 'kickstart/plugins/toggleterm',
   -- require 'kickstart/plugins/refactoring',
   require 'kickstart/plugins/telescope',
   require 'kickstart/plugins/tmux-navigator',
