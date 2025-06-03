@@ -19,6 +19,40 @@ vim.keymap.set('n', 'L', ':BufferLineCycleNext<cr>', NS)
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>cq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Move Lines
+vim.keymap.set('n', '<M-j>', ':m .+1<cr>==', { desc = 'Move down' })
+vim.keymap.set('n', '<M-k>', ':m .-2<cr>==', { desc = 'Move up' })
+vim.keymap.set('v', '<M-j>', ":m '>+1<cr>gv=gv", { desc = 'Move down' })
+vim.keymap.set('v', '<M-k>', ":m '<-2<cr>gv=gv", { desc = 'Move up' })
+
+-- Jumplist
+vim.keymap.set('n', '<C-m>', '<C-i>', NS)
+
+-- Treesj
+vim.keymap.set('n', '<leader>j', function()
+  require('treesj').toggle { split = { recusive = true } }
+end, { noremap = true, silent = true, desc = 'Toggle Split Join' })
+
+-- dont yank on visual paste
+vim.keymap.set('v', 'p', '"_dP', NS)
+
+-- Cancel search highlighting with ESC
+vim.keymap.set('n', '<ESC>', ':nohlsearch<Bar>:echo<CR>', NS)
+
+-- Select all
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G', NS)
+
+-- LSP
+vim.keymap.set('n', '<leader>li', ':LspInfo<cr>', { desc = 'LSP Info' })
+vim.keymap.set('n', '<leader>lr', ':LspReset<cr>', { desc = 'LSP Reset' })
+
+-- System
+vim.keymap.set('n', '<leader>zc', ':e $MYVIMRC<cr>', { noremap = true, silent = true, desc = 'Config' })
+vim.keymap.set('n', '<leader>zh', ':checkhealth<cr>', { noremap = true, silent = true, desc = 'Health' })
+vim.keymap.set('n', '<leader>zm', ':Mason<cr>', { noremap = true, silent = true, desc = 'Mason' })
+vim.keymap.set('n', '<leader>zl', ':Lazy<cr>', { noremap = true, silent = true, desc = 'Lazy' })
+vim.keymap.set('n', '<leader>za', ':messages<cr>', { desc = 'Messages' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

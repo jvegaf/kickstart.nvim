@@ -24,11 +24,13 @@ require('lazy').setup({
   -- include a plugin definition from file lua/path/name.lua
 
   require 'kickstart/plugins/anyjump',
+  require 'kickstart/plugins/avante',
   require 'kickstart/plugins/blink-cmp',
   require 'kickstart/plugins/browser-search',
   require 'kickstart/plugins/conform',
   require 'kickstart/plugins/copilot',
-  require 'kickstart/plugins/copilot',
+  require 'kickstart/plugins/snacks',
+  -- require 'kickstart/plugins/code-companion',
   require 'kickstart/plugins/git',
   require 'kickstart/plugins/gitsigns',
   require 'kickstart/plugins/lspconfig',
