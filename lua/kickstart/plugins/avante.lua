@@ -41,8 +41,8 @@ return {
         },
         suggestion = {
           accept = '<M-l>',
-          next = '<M-]>',
-          prev = '<M-[>',
+          next = '<M-j>',
+          prev = '<M-k>',
           dismiss = '<C-]>',
         },
         jump = {
