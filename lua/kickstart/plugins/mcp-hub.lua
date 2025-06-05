@@ -1,6 +1,5 @@
 return {
   'ravitemer/mcphub.nvim',
-  event = 'VeryLazy',
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
@@ -13,6 +12,16 @@ return {
           make_slash_commands = true, -- make /slash commands from MCP server prompts
         },
       },
+      port = 3000, -- Port for the mcp-hub Express server
+      -- CRITICAL: Must be an absolute path
+      config = vim.fn.expand '~/.config/nvim/mcpservers.json',
+      log = {
+        level = vim.log.levels.WARN, -- Adjust verbosity (DEBUG, INFO, WARN, ERROR)
+        to_file = true, -- Log to ~/.local/state/nvim/mcphub.log
+      },
+      on_ready = function()
+        vim.notify('MCP Hub backend server is initialized and ready.', vim.log.levels.INFO)
+      end,
     }
   end,
   keys = {
