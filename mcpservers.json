@@ -22,5 +22,11 @@
       "@modelcontextprotocol/server-filesystem",
       "/home/th3g3ntl3man/Code"
     ]
-  }
+  },
+"github.com/AgentDeskAI/browser-tools-mcp": {
+  "command": "npx",
+  "args": [
+    "@agentdeskai/browser-tools-mcp@latest"
+  ]
+}
 }}
