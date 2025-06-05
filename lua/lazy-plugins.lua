@@ -25,6 +25,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/anyjump',
   require 'kickstart/plugins/avante',
+  -- require 'kickstart/plugins/code-companion',
   require 'kickstart/plugins/copilot',
   require 'kickstart/plugins/copilot-chat',
   require 'kickstart/plugins/mcp-hub',
@@ -33,7 +34,6 @@ require('lazy').setup({
   require 'kickstart/plugins/browser-search',
   require 'kickstart/plugins/conform',
   require 'kickstart/plugins/snacks',
-  -- require 'kickstart/plugins/code-companion',
   require 'kickstart/plugins/git',
   require 'kickstart/plugins/gitsigns',
   require 'kickstart/plugins/lspconfig',
