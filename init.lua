@@ -94,16 +94,19 @@ vim.g.maplocalleader = ','
 vim.g.have_nerd_font = false
 
 -- [[ Setting options ]]
-require 'options'
+require('options')
 
 -- [[ Basic Keymaps ]]
-require 'keymaps'
+require('keymaps')
 
 -- [[ Install `lazy.nvim` plugin manager ]]
-require 'lazy-bootstrap'
+require('lazy-bootstrap')
+
+-- [[ AutoCommands ]]
+require('autocmds')
 
 -- [[ Configure and install plugins ]]
-require 'lazy-plugins'
+require('lazy-plugins')
 if vim.g.neovide then
   vim.keymap.set({ 'n', 'v' }, '<C-+>', ':lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>')
   vim.keymap.set({ 'n', 'v' }, '<C-->', ':lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>')

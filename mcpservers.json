@@ -1,32 +1,33 @@
-{"mcpServers":{
-  "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking": {
-    "command": "npx",
-    "args": [
-      "-y",
-      "@modelcontextprotocol/server-sequential-thinking"
-    ]
-  }
-  ,
-  "github.com/modelcontextprotocol/servers/tree/main/src/memory": {
-    "command": "npx",
-    "args": [
-      "-y",
-      "@modelcontextprotocol/server-memory"
-    ]
-  }
-  ,
-  "github.com/modelcontextprotocol/servers/tree/main/src/filesystem": {
-    "command": "npx",
-    "args": [
-      "-y",
-      "@modelcontextprotocol/server-filesystem",
-      "/home/th3g3ntl3man/Code"
-    ]
-  },
-"github.com/AgentDeskAI/browser-tools-mcp": {
-  "command": "npx",
-  "args": [
-    "@agentdeskai/browser-tools-mcp@latest"
-  ]
+{
+	"mcpServers": {
+		"github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+		},
+		"github.com/modelcontextprotocol/servers/tree/main/src/memory": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-memory"]
+		},
+		"github.com/modelcontextprotocol/servers/tree/main/src/filesystem": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"/home/th3g3ntl3man/Code"
+			]
+		},
+		"github.com/AgentDeskAI/browser-tools-mcp": {
+			"command": "npx",
+			"args": ["@agentdeskai/browser-tools-mcp@latest"]
+		},
+		"github.com/TheSethRose/Fetch-Browser": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"--client",
+				"claude"
+			]
+		}
+	}
 }
-}}

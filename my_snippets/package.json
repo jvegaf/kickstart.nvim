@@ -1,0 +1,173 @@
+{
+  "name": "nvim-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "cpp"
+        ],
+        "path": "./cpp.json"
+      },
+      {
+        "language": [
+          "rust"
+        ],
+        "path": "./rust.json"
+      },
+      {
+        "language": [
+          "sh"
+        ],
+        "path": "./sh.json"
+      },
+      {
+        "language": [
+          "java"
+        ],
+        "path": "./java.json"
+      },
+      {
+        "language": [
+          "typescriptreact"
+        ],
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": [
+          "typescript"
+        ],
+        "path": "./typescript.json"
+      },
+      {
+        "language": [
+          "javascript"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./jsonc.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./html.json"
+      },
+      {
+        "language": "vue",
+        "path": "./vue.json"
+      },
+      {
+        "language": "jade",
+        "path": "./vue-pug.json"
+      },
+      {
+        "language": "html",
+        "path": "./vue-template.json"
+      },
+      {
+        "language": "vue-html",
+        "path": "./vue-template.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-script.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-script-router.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-script.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-script-router.json"
+      },
+      {
+        "language": "dart",
+        "path": "./dart.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/async_notifier_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/async_notifier.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/notifier_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/notifier.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/stream_notifier_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/stream_notifier.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/consumer.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/change_notifier_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/change_notifier.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/future_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/state_notifier.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/state_notifier_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/state_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/stream_provider.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/consumer_widgets.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/hook_consumer.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/provider_listenable.json"
+      },
+      {
+        "language": "dart",
+        "path": "./riverpod/code_generator.json"
+      }
+    ]
+  }
+}

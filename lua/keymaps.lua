@@ -13,7 +13,8 @@ vim.keymap.set('n', 'Q', ':bdelete<CR>', NS) -- close buffer
 vim.keymap.set('n', 'vv', 'V', NS) -- close buffer
 
 -- Buffers
-vim.keymap.set('n', '<leader>e', ':Neotree<CR>', NS) -- close buffer
+-- vim.keymap.set('n', '<leader>e', ':Neotree<CR>', NS) -- close buffer
+vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>', NS) -- close buffer
 vim.keymap.set('n', 'H', ':BufferLineCyclePrev<cr>', NS)
 vim.keymap.set('n', 'L', ':BufferLineCycleNext<cr>', NS)
 -- Diagnostic keymaps
@@ -30,7 +31,7 @@ vim.keymap.set('n', '<C-m>', '<C-i>', NS)
 
 -- Treesj
 vim.keymap.set('n', '<leader>j', function()
-  require('treesj').toggle { split = { recusive = true } }
+  require('treesj').toggle({ split = { recusive = true } })
 end, { noremap = true, silent = true, desc = 'Toggle Split Join' })
 
 -- dont yank on visual paste
@@ -41,6 +42,9 @@ vim.keymap.set('n', '<ESC>', ':nohlsearch<Bar>:echo<CR>', NS)
 
 -- Select all
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G', NS)
+
+vim.keymap.set('v', '<', '<gv', { desc = 'Stay in indent mode' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Stay in indent mode' })
 
 -- LSP
 vim.keymap.set('n', '<leader>li', ':LspInfo<cr>', { desc = 'LSP Info' })
