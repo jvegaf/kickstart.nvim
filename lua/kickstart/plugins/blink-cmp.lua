@@ -4,7 +4,7 @@ return {
     event = 'VimEnter',
     version = '1.*',
     dependencies = {
-      { 'saghen/blink.compat' },
+      -- { 'saghen/blink.compat' },
       -- Snippet Engine
       {
         'L3MON4D3/LuaSnip',
@@ -13,7 +13,7 @@ return {
           -- Build Step is needed for regex support in snippets.
           -- This step is not supported in many windows environments.
           -- Remove the below condition to re-enable on windows.
-          if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
+          if vim.fn.has('win32') == 1 or vim.fn.executable('make') == 0 then
             return
           end
           return 'make install_jsregexp'
@@ -32,6 +32,7 @@ return {
         opts = {},
       },
       'folke/lazydev.nvim',
+      'Kaiser-Yang/blink-cmp-avante',
       { 'rafamadriz/friendly-snippets', lazy = true },
     },
     --- @module 'blink.cmp'
@@ -84,35 +85,43 @@ return {
           'path',
           'snippets',
           'lazydev',
-          'avante_commands',
-          'avante_mentions',
-          'avante_files',
+          'avante',
+          -- 'avante_commands',
+          -- 'avante_mentions',
+          -- 'avante_files',
         },
-        compat = {
-          'avante_commands',
-          'avante_mentions',
-          'avante_files',
-        },
+        -- compat = {
+        --   'avante_commands',
+        --   'avante_mentions',
+        --   'avante_files',
+        -- },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
-          avante_commands = {
-            name = 'avante_commands',
-            module = 'blink.compat.source',
-            score_offset = 90,
-            opts = {},
+          avante = {
+            module = 'blink-cmp-avante',
+            name = 'Avante',
+            opts = {
+              -- options for blink-cmp-avante
+            },
           },
-          avante_files = {
-            name = 'avante_files',
-            module = 'blink.compat.source',
-            score_offset = 100,
-            opts = {},
-          },
-          avante_mentions = {
-            name = 'avante_mentions',
-            module = 'blink.compat.source',
-            score_offset = 1000,
-            opts = {},
-          },
+          -- avante_commands = {
+          --   name = 'avante_commands',
+          --   module = 'blink.compat.source',
+          --   score_offset = 90,
+          --   opts = {},
+          -- },
+          -- avante_files = {
+          --   name = 'avante_files',
+          --   module = 'blink.compat.source',
+          --   score_offset = 100,
+          --   opts = {},
+          -- },
+          -- avante_mentions = {
+          --   name = 'avante_mentions',
+          --   module = 'blink.compat.source',
+          --   score_offset = 1000,
+          --   opts = {},
+          -- },
         },
       },
 

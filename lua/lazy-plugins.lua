@@ -56,7 +56,7 @@ require('lazy').setup({
   require('kickstart/plugins/treesitter'),
   require('kickstart/plugins/treesj'),
   require('kickstart/plugins/treewalker'),
-  require('kickstart/plugins/undo'),
+  -- require('kickstart/plugins/undo'),
   require('kickstart/plugins/url-open'),
   require('kickstart/plugins/vim-easy-align'),
   require('kickstart/plugins/vim-visual-multi'),

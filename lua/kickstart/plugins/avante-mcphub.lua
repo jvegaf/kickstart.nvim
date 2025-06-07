@@ -4,7 +4,7 @@ return {
     lazy = false,
     version = false, -- set this if you want to always pull the latest change
     opts = {
-      ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
+      -- @alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
       provider = 'copilot', -- Recommend using Claude
       providers = {
         copilot = {
