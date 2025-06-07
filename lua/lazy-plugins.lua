@@ -25,10 +25,10 @@ require('lazy').setup({
 
   require 'kickstart/plugins/anyjump',
   -- require 'kickstart/plugins/avante',
-  -- require 'kickstart/plugins/avante-mcphub',
-  require 'kickstart/plugins/code-companion',
+  require 'kickstart/plugins/avante-mcphub',
+  -- require 'kickstart/plugins/code-companion',
   require 'kickstart/plugins/copilot',
-  require 'kickstart/plugins/copilot-chat',
+  -- require 'kickstart/plugins/copilot-chat',
   require 'kickstart/plugins/mcp-hub',
   require 'kickstart/plugins/bufferline',
   require 'kickstart/plugins/blink-cmp',
