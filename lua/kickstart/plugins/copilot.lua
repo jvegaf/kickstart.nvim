@@ -1,8 +1,9 @@
 return {
   'zbirenbaum/copilot.lua',
   event = 'InsertEnter',
+  lazy = false,
   opts = function()
-    require('copilot.api').status = require 'copilot.status'
+    require('copilot.api').status = require('copilot.status')
     require('copilot.api').filetypes = {
       filetypes = {
         yaml = false,
