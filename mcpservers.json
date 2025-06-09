@@ -20,14 +20,9 @@
 			"command": "npx",
 			"args": ["@agentdeskai/browser-tools-mcp@latest"]
 		},
-		"github.com/TheSethRose/Fetch-Browser": {
-			"command": "npx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-filesystem",
-				"--client",
-				"claude"
-			]
+		"fetch": {
+			"command": "uvx",
+			"args": ["mcp-server-fetch"]
 		}
 	}
 }

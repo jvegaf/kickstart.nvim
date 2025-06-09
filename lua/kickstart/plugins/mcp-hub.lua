@@ -3,9 +3,10 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
+  -- need install uv before install this plugin. command = curl -LsSf https://astral.sh/uv/install.sh | sh
   build = 'npm install -g mcp-hub@latest', -- Installs `mcp-hub` node binary globally
   config = function()
-    require('mcphub').setup {
+    require('mcphub').setup({
       auto_approve = true,
       extensions = {
         avante = {
@@ -14,7 +15,7 @@ return {
       },
       port = 3000, -- Port for the mcp-hub Express server
       -- CRITICAL: Must be an absolute path
-      config = vim.fn.expand '~/.config/nvim/mcpservers.json',
+      config = vim.fn.expand('~/.config/nvim/mcpservers.json'),
       log = {
         level = vim.log.levels.WARN, -- Adjust verbosity (DEBUG, INFO, WARN, ERROR)
         to_file = true, -- Log to ~/.local/state/nvim/mcphub.log
@@ -22,7 +23,7 @@ return {
       on_ready = function()
         vim.notify('MCP Hub backend server is initialized and ready.', vim.log.levels.INFO)
       end,
-    }
+    })
   end,
   keys = {
     {
