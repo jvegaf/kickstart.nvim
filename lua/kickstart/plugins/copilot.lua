@@ -3,6 +3,11 @@ return {
   event = 'InsertEnter',
   lazy = false,
   opts = function()
+    require('copilot').setup({
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    })
+
     require('copilot.api').status = require('copilot.status')
     require('copilot.api').filetypes = {
       filetypes = {

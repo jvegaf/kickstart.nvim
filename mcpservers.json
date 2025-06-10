@@ -23,6 +23,10 @@
 		"fetch": {
 			"command": "uvx",
 			"args": ["mcp-server-fetch"]
+		},
+		"sequentialthinking": {
+			"command": "docker",
+			"args": ["run", "--rm", "-i", "mcp/sequentialthinking"]
 		}
 	}
 }
