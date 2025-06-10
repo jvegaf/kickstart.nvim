@@ -6,12 +6,44 @@ return {
     {
       'Davidyz/VectorCode',
       version = '*', -- optional, depending on whether you're on nightly or release
-      build = 'pipx upgrade vectorcode', -- optional but recommended. This keeps your CLI up-to-date.
+      build = 'uv tool upgrade vectorcode', -- This helps keeping the CLI up-to-date
       dependencies = { 'nvim-lua/plenary.nvim' },
+    },
+    {
+      'OXY2DEV/markview.nvim',
+      lazy = false,
+      opts = {
+        preview = {
+          filetypes = { 'markdown', 'codecompanion' },
+          ignore_buftypes = {},
+        },
+      },
+    },
+    {
+      'echasnovski/mini.diff',
+      config = function()
+        local diff = require('mini.diff')
+        diff.setup({
+          -- Disabled by default
+          source = diff.gen_source.none(),
+        })
+      end,
+    },
+    {
+      'HakonHarnes/img-clip.nvim',
+      opts = {
+        filetypes = {
+          codecompanion = {
+            prompt_for_file_name = false,
+            template = '[Image]($FILE_PATH)',
+            use_absolute_path = true,
+          },
+        },
+      },
     },
   },
   init = function()
-    vim.cmd [[cab cc CodeCompanion]]
+    vim.cmd([[cab cc CodeCompanion]])
 
     local group = vim.api.nvim_create_augroup('CodeCompanionHooks', {})
 
@@ -19,7 +51,7 @@ return {
       pattern = 'CodeCompanionInlineFinished',
       group = group,
       callback = function(request)
-        vim.lsp.buf.format { bufnr = request.buf }
+        vim.lsp.buf.format({ bufnr = request.buf })
       end,
     })
   end,
@@ -101,9 +133,9 @@ return {
             description = 'List git files',
             ---@param chat CodeCompanion.Chat
             callback = function(chat)
-              local handle = io.popen 'git ls-files'
+              local handle = io.popen('git ls-files')
               if handle ~= nil then
-                local result = handle:read '*a'
+                local result = handle:read('*a')
                 handle:close()
                 chat:add_reference({ role = 'user', content = result }, 'git', '<git_files>')
               else
@@ -134,7 +166,7 @@ return {
 
           ---The header name for your messages
           ---@type string
-          user = 'Vos',
+          user = 'User',
         },
         tools = {
           groups = {
@@ -175,18 +207,18 @@ return {
               requires_approval = true,
             },
           },
-          ['mcp'] = { -- Name this tool whatever you like
-            -- Callback provides the necessary functions to CodeCompanion
-            callback = function()
-              return require 'mcphub.extensions.codecompanion'
-            end,
-            opts = {
-              -- If true, CodeCompanion will ask for approval before executing the MCP tool call
-              requires_approval = true,
-              -- Optional: Pass parameters like temperature to the underlying LLM if the chat strategy supports it
-              temperature = 0.7,
-            },
-          },
+          -- ['mcp'] = { -- Name this tool whatever you like
+          --   -- Callback provides the necessary functions to CodeCompanion
+          --   callback = function()
+          --     return require('mcphub.extensions.codecompanion')
+          --   end,
+          --   opts = {
+          --     -- If true, CodeCompanion will ask for approval before executing the MCP tool call
+          --     requires_approval = true,
+          --     -- Optional: Pass parameters like temperature to the underlying LLM if the chat strategy supports it
+          --     temperature = 0.7,
+          --   },
+          -- },
         },
       },
     },
@@ -225,7 +257,7 @@ return {
           ---When chat is cleared with `gx` delete the chat from history
           delete_on_clearing_chat = false,
           ---Directory path to save the chats
-          dir_to_save = vim.fn.stdpath 'data' .. '/codecompanion-history',
+          dir_to_save = vim.fn.stdpath('data') .. '/codecompanion-history',
           ---Enable detailed logging for history extension
           enable_logging = false,
         },

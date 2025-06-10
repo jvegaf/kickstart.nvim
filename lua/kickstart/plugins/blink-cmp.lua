@@ -6,6 +6,7 @@ return {
     dependencies = {
       -- { 'saghen/blink.compat' },
       'giuxtaposition/blink-cmp-copilot',
+      'olimorris/codecompanion.nvim',
       -- Snippet Engine
       {
         'L3MON4D3/LuaSnip',
@@ -70,7 +71,7 @@ return {
       appearance = {
         -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
         kind_icons = {
-          Copilot = "",
+          Copilot = '',
           Text = '󰉿',
           Method = '󰊕',
           Function = '󰊕',
@@ -112,6 +113,7 @@ return {
 
       sources = {
         default = {
+          'codecompanion',
           'lsp',
           'path',
           'snippets',
@@ -128,6 +130,11 @@ return {
         --   'avante_files',
         -- },
         providers = {
+          codecompanion = {
+            name = 'CodeCompanion',
+            module = 'codecompanion.providers.completion.blink',
+            enabled = true,
+          },
           copilot = {
             name = 'copilot',
             module = 'blink-cmp-copilot',
