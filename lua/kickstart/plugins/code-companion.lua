@@ -6,6 +6,7 @@ return {
     {
       'Davidyz/VectorCode',
       version = '*', -- optional, depending on whether you're on nightly or release
+      -- build = 'pipx upgrade vectorcode', -- This helps keeping the CLI up-to-date
       build = 'uv tool upgrade vectorcode', -- This helps keeping the CLI up-to-date
       dependencies = { 'nvim-lua/plenary.nvim' },
     },
@@ -13,6 +14,9 @@ return {
       'OXY2DEV/markview.nvim',
       lazy = false,
       opts = {
+        experimental = {
+          check_rtp_message = false,
+        },
         preview = {
           filetypes = { 'markdown', 'codecompanion' },
           ignore_buftypes = {},
