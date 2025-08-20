@@ -113,7 +113,7 @@ return {
 
       sources = {
         default = {
-          'codecompanion',
+          -- 'codecompanion',
           'lsp',
           'path',
           'snippets',
