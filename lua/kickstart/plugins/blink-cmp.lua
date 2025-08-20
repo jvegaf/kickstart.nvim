@@ -118,7 +118,7 @@ return {
           'path',
           'snippets',
           'lazydev',
-          'avante',
+          -- 'avante',
           'copilot',
           -- 'avante_commands',
           -- 'avante_mentions',
@@ -130,11 +130,11 @@ return {
         --   'avante_files',
         -- },
         providers = {
-          codecompanion = {
-            name = 'CodeCompanion',
-            module = 'codecompanion.providers.completion.blink',
-            enabled = true,
-          },
+          -- codecompanion = {
+          --   name = 'CodeCompanion',
+          --   module = 'codecompanion.providers.completion.blink',
+          --   enabled = true,
+          -- },
           copilot = {
             name = 'copilot',
             module = 'blink-cmp-copilot',
@@ -151,13 +151,13 @@ return {
             end,
           },
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
-          avante = {
-            module = 'blink-cmp-avante',
-            name = 'Avante',
-            opts = {
-              -- options for blink-cmp-avante
-            },
-          },
+          -- avante = {
+          --   module = 'blink-cmp-avante',
+          --   name = 'Avante',
+          --   opts = {
+          --     -- options for blink-cmp-avante
+          --   },
+          -- },
           -- avante_commands = {
           --   name = 'avante_commands',
           --   module = 'blink.compat.source',

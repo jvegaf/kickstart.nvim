@@ -24,9 +24,9 @@ require('lazy').setup({
   -- include a plugin definition from file lua/path/name.lua
 
   require('kickstart/plugins/anyjump'),
-  -- require('kickstart/plugins/avante'),
-  require('kickstart/plugins/mcp-hub'),
-  require('kickstart/plugins/avante-mcphub'),
+  require('kickstart/plugins/avante'),
+  -- require('kickstart/plugins/mcp-hub'),
+  -- require('kickstart/plugins/avante-mcphub'),
   -- require('kickstart/plugins/code-companion'),
   require('kickstart/plugins/copilot-old'),
   -- require('kickstart/plugins/copilot'),
