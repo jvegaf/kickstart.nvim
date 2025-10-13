@@ -16,7 +16,7 @@ return {
       {
         'gq',
         function()
-          require('conform').format { async = true, lsp_format = 'fallback' }
+          require('conform').format({ async = true, lsp_format = 'fallback' })
         end,
         mode = '',
         desc = '[F]ormat buffer',
@@ -46,6 +46,7 @@ return {
         -- You can use 'stop_after_first' to run the first available formatter from the list
         javascript = { 'biome' },
         json = { 'biome' },
+        css = { 'prettierd' },
       },
     },
   },
